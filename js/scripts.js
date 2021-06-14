@@ -3,6 +3,7 @@ $(document).ready(function(){
         $('.mobile-nav').toggleClass('mobile-hidden');
         $('.hamburger').toggleClass('is-active');
         $('.logo').toggleClass('logo-is-hidden');
+        $('.phone-icon').toggleClass('phone-icon-hidden');
         $('.navigation-wrapper').toggleClass('align-nav-end');
     });
 
@@ -11,9 +12,11 @@ $(document).ready(function(){
       $('.item-services').toggleClass('item-services-is-active');
     });
 
-    $('.item-services').on('click', () => {
-      $('.frst-select').toggleClass('frst-select-is-active');
-      
+    $('.nav-item.frst-select').on('click', () => {
+      $('.frst-select').toggleClass('frst-select-is-active'); 
+    });
+    $('.div.nav-item.mob-nav-item.frst-select').on('click', () => {
+      $('div.nav-item.mob-nav-item.frst-select').toggleClass('frst-select-is-active'); 
     });
 
     $("#lang-id").select2({
